@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="../../assets/img/travelvee-logo.svg" alt=""></a>
+  <a class="navbar-brand" href="/"><img src="../../assets/img/travelvee-logo.svg" alt=""></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="btn btn-primary" href="#">Для отельеров</a>
+        <a class="btn btn-primary rounded-pill" href="#">Для отельеров</a>
       </li>
     </ul>
     <div class="form-inline my-2 my-lg-0">
@@ -16,11 +16,12 @@
              aria-haspopup="true" aria-expanded="false">
             EN
           </a>
+          <!--class="dropdown-menu"-->
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">En</a>
-            <a class="dropdown-item" href="#">Ru</a>
-            <a class="dropdown-item" href="#">Pl</a>
-            <a class="dropdown-item" href="#">Ge</a>
+            <a class="dropdown-item" href="#" *ngFor="let option of languages">
+              <img src="{{ option.flag }}" alt="" class="language-flag">
+              {{ option.name }}
+            </a>
           </div>
         </li>
       </ul>
