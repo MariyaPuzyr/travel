@@ -11,11 +11,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#" (click)="open(content)">Sign in</a>
         </li>
-        <li class="nav-item dropdown" (click)="clickEvent()"
-             [ngClass]="status ? 'show' : ''">
-          <a class="nav-link dropdown-toggle" href="#">EN</a>
-          <!--class="dropdown-menu"-->
-          <div class="dropdown-menu">
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle id="navbarDropdown2" role="button">EN</a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="#" *ngFor="let option of languages">
               <img src="{{ option.flag }}" alt="" class="language-flag">
               {{ option.name }}
@@ -27,11 +25,9 @@
   </div>
 </nav>
 
-
-
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <h4 class="modal-title" id="modal-basic-title">Sign in</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -39,13 +35,10 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label for="dateOfBirth">Date of birth</label>
-        <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-          </div>
-        </div>
+        <input id="phone" class="form-control" placeholder="+44 (___) ___-__-__" name="phone">
+      </div>
+      <div class="form-group">
+        <input id="password" class="form-control" placeholder="Пароль" name="password">
       </div>
     </form>
   </div>
