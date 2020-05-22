@@ -6,6 +6,8 @@
     font-size: 14px;
     line-height: 19px;
     color: #424242;
+    display: flex;
+    align-items: baseline;
   }
   .dropdown-toggle::after {
     border: none;

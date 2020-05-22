@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -13,14 +14,27 @@ export class HeaderComponent implements OnInit {
     {name: 'Ge', flag: 'https://www.countryflags.io/be/flat/64.png'}
   ];
   public status = false;
-
-  constructor() {
-  }
+  closeResult = '';
 
   ngOnInit(): void {
   }
 
+  /* show dropdown */
   clickEvent() {
     this.status = !this.status;
+  }
+
+  /* show modal */
+  constructor(private modalService: NgbModal) {
+  }
+
+  /*  open() {
+      const modalRef = this.modalService.open(SignInComponent);
+      modalRef.componentInstance.name = 'World';
+    }*/
+
+
+  open(content) {
+    const modalRef = this.modalService.open(content);
   }
 }
