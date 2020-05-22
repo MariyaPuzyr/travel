@@ -12,10 +12,13 @@ export class HeaderComponent implements OnInit {
     {name: 'Pl', flag: 'https://www.countryflags.io/PL/flat/64.png'},
     {name: 'Ge', flag: 'https://www.countryflags.io/be/flat/64.png'}
   ];
+  public activeItem: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  public onSelectItem(item: string): void {
+    this.activeItem = item;
+  }
 }
