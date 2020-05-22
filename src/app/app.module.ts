@@ -3,14 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { SignInComponent } from './sign-in/sign-in.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SignInComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
