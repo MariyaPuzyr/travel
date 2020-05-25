@@ -1,5 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { Languages } from '../../consts/languages.const';
+import { AuthService } from 'src/app/core/services/auth.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,12 +12,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public languages = [
-    {name: 'En', flag: 'https://www.countryflags.io/US/flat/64.png'},
-    {name: 'Ru', flag: 'https://www.countryflags.io/RU/flat/64.png'},
-    {name: 'Pl', flag: 'https://www.countryflags.io/PL/flat/64.png'},
-    {name: 'Ge', flag: 'https://www.countryflags.io/be/flat/64.png'}
-  ];
+  public languages = Languages;
 
   public phoneList = [
     {code: '+61', flag: 'https://www.countryflags.io/US/flat/64.png'},
@@ -28,8 +28,15 @@ export class HeaderComponent implements OnInit {
   }
 
   /* show modal */
-  constructor(private modalService: NgbModal) {
-  }
+  constructor(
+    private modalService: NgbModal,
+    private authService: AuthService,
+  ) { }
+
+  // this.authService.login({})
+  // .subscribe((response) => {
+
+  // });
 
   toggleDropdown() {
     this.showDropdown = !this.showDropdown;
