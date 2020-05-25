@@ -35,8 +35,8 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <input id="phone" class="form-control" (click)="toggleDropdown()" placeholder="+44 (___) ___-__-__" name="phone">
-        <div class="state-container-dropdown">
+        <input id="phone" class="form-control" (click)="toggleDropdown()" placeholder="+44 (___) ___-__-__" name="phone" autocomplete="off">
+        <div *ngIf="showDropdown" class="state-container-dropdown">
           <div>
             <div *ngFor="let items of phoneList">
               <img src="{{ items.flag }}" alt="" class="language-flag">

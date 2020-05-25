@@ -22,6 +22,8 @@ export class HeaderComponent implements OnInit {
     {code: '+44', flag: 'https://www.countryflags.io/US/flat/64.png'},
   ];
 
+  public showDropdown = false;
+
   ngOnInit(): void {
   }
 
@@ -30,7 +32,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleDropdown() {
-
+    this.showDropdown = !this.showDropdown;
   }
   open(content) {
     const modalRef = this.modalService.open(content);
