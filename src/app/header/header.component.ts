@@ -14,6 +14,14 @@ export class HeaderComponent implements OnInit {
     {name: 'Ge', flag: 'https://www.countryflags.io/be/flat/64.png'}
   ];
 
+  public phoneList = [
+    {code: '+61', flag: 'https://www.countryflags.io/US/flat/64.png'},
+    {code: '+43', flag: 'https://www.countryflags.io/US/flat/64.png'},
+    {code: '+991', flag: 'https://www.countryflags.io/US/flat/64.png'},
+    {code: '+380', flag: 'https://www.countryflags.io/US/flat/64.png'},
+    {code: '+44', flag: 'https://www.countryflags.io/US/flat/64.png'},
+  ];
+
   ngOnInit(): void {
   }
 
@@ -21,6 +29,9 @@ export class HeaderComponent implements OnInit {
   constructor(private modalService: NgbModal) {
   }
 
+  toggleDropdown() {
+
+  }
   open(content) {
     const modalRef = this.modalService.open(content);
   }
