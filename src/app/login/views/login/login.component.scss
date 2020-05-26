@@ -1,0 +1,11 @@
+.hotelier-login {
+  background: #F5F9FC;
+  text-align: center;
+  &__item {
+    margin: 60px auto;
+    display: table;
+    max-width: 410px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+  }
+}
