@@ -4,38 +4,7 @@
       <h4 class="modal-title" id="modal-basic-title">Sign in as hotelier</h4>
     </div>
     <div class="modal-body">
-      <form name="myform" ng-submit="register()" novalidate>
-        <div class="form-group">
-          <input id="phone" class="form-control" (click)="toggleDropdown()" placeholder="+44 (___) ___-__-__" name="phone" autocomplete="off">
-          <div *ngIf="showDropdown" class="state-container-dropdown">
-            <div>
-              <div *ngFor="let items of phoneList">
-                <img src="{{ items.flag }}" alt="" class="language-flag">
-                <span>{{items.code}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <input id="password" class="form-control" placeholder="Пароль" name="password">
-        </div>
-        <div class="form-group d-flex">
-          <label class="btn-primary" ngbButtonLabel>
-            <input type="checkbox" formControlName="left" ngbButton> Запомнить меня
-          </label>
-          <a href="#" class="ml-auto">Забыли пароль?</a>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary rounded-pill w-100">Войти</button>
-        </div>
-        <div class="form-group">
-          <div class="dont-registration text-center">Не зарегистрированы ? <a href="#">Зарегистрироваться</a></div>
-        </div>
-        <div class="form-group login-social d-flex flex-column">
-          <a href="#" class="btn border-primary rounded-pill mb-2">Войти с помощью Facebook</a>
-          <a href="#" class="btn border-primary rounded-pill">Войти с помощью Google</a>
-        </div>
-      </form>
+      <app-login-form></app-login-form>
     </div>
   </div>
 </div>
