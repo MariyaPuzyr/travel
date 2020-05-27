@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Phone} from '../../../main/consts/phone-code.conts';
+import {Phone} from '../../../../../main/consts/phone-code.conts';
+
 
 @Component({
   selector: 'app-login-form',
