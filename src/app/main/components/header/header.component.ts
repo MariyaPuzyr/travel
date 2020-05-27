@@ -3,7 +3,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { Languages } from '../../consts/languages.const';
-import { Phone } from '../../consts/phone-code.conts';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 
