@@ -11,14 +11,14 @@
         <li class="nav-item">
           <span class="nav-link" (click)="open(content)">Sign in</span>
         </li>
-        <li class="nav-item" ngbDropdown>
-          <a class="nav-link dropdown-toggle" ngbDropdownToggle id="navbarDropdown2" role="button">EN</a>
-          <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#" *ngFor="let option of languages">
+        <li class="nav-item">
+          <button mat-button [matMenuTriggerFor]="beforeMenu">EN</button>
+          <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item *ngFor="let option of languages">
               <img src="{{ option.flag }}" alt="" class="language-flag">
               {{ option.name }}
-            </a>
-          </div>
+            </button>
+          </mat-menu>
         </li>
       </ul>
     </div>
