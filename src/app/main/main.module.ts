@@ -3,23 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './views/main/main.component';
-import {LoginFormComponent} from '../login/modules/login-form/components/login-form/login-form.component';
+import { LoginFormModule } from '../login/modules/login-form/login-form.module';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    LoginFormModule
   ],
   declarations: [
     HeaderComponent,
-    MainComponent,
-    LoginFormComponent
+    MainComponent
   ],
   providers: [],
   exports: [
     HeaderComponent,
-    MainComponent,
-    LoginFormComponent
+    MainComponent
   ]
 })
 export class MainModule { }
