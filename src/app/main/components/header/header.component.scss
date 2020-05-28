@@ -22,34 +22,7 @@
   height: 24px;
   margin-right: 10px;
 }
-.dropdown {
-  .dropdown-menu {
-    min-width: inherit;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 0 0 6px 6px;
-    border: none;
-    overflow: hidden;
-  }
-  .dropdown-item {
-    padding: 5px 10px;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 15px;
-    color: #424242;
-    display: flex;
-    align-items: center;
-    &:hover {
-      background: #EBEBEB;
-    }
-  }
-  &.show {
-    .dropdown-menu {
-      display: block;
-    }
-  }
-}
+
 .form-group {
   position: relative;
 }
