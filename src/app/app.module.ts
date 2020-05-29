@@ -7,7 +7,7 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialAppModule } from './ngmaterial.module';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 
@@ -19,7 +19,8 @@ import { AppComponent } from './app.component';
     MainModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialAppModule
+    MaterialAppModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
