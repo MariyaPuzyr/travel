@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { Languages } from '../../consts/languages.const';
 import { AuthService } from 'src/app/core/services/auth.service';
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   /* show modal */
   constructor(
-    private modalService: NgbModal,
+    // private modalService: NgbModal,
     private authService: AuthService,
   ) { }
 
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
   // });
 
-  open(content) {
-    const modalRef = this.modalService.open(content);
-  }
+  // open(content) {
+  //   const modalRef = this.modalService.open(content);
+  // }
 }
