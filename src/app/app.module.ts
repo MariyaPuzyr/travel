@@ -1,26 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MainModule } from './main/main.module';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialAppModule } from './ngmaterial.module';
-import { FormsModule } from '@angular/forms';
+import {LoginFormModule} from './login/modules/login-form/login-form.module';
+import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 
 
 @NgModule({
   imports: [
     BrowserModule,
-    NgbModule,
     CoreModule,
     MainModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialAppModule,
-    FormsModule
+    LoginFormModule,
+    FormsModule,
+    MatInputModule
   ],
   declarations: [
     AppComponent,
