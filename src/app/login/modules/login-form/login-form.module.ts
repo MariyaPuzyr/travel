@@ -7,6 +7,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     FormsModule,
     MatFormFieldModule,
     MatAutocompleteModule,
+    MatInputModule
   ],
   declarations: [
     LoginFormComponent

@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialAppModule } from './ngmaterial.module';
 import {LoginFormModule} from './login/modules/login-form/login-form.module';
 import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 
 
@@ -22,7 +21,6 @@ import { AppComponent } from './app.component';
     MaterialAppModule,
     LoginFormModule,
     FormsModule,
-    MatInputModule
   ],
   declarations: [
     AppComponent,
