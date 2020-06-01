@@ -6,6 +6,8 @@ import { MainComponent } from './views/main/main.component';
 import { LoginFormModule } from '../login/modules/login-form/login-form.module';
 import {_MatMenuDirectivesModule, MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule} from '@angular/material/button';
+import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -14,11 +16,13 @@ import { MatButtonModule} from '@angular/material/button';
     LoginFormModule,
     _MatMenuDirectivesModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   declarations: [
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    ModalDialogComponent
   ],
   providers: [],
   exports: [

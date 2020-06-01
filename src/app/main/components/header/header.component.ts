@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-// import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
 import { Languages } from '../../consts/languages.const';
 import { AuthService } from 'src/app/core/services/auth.service';
+import {MatDialog} from '@angular/material/dialog';
+import {ModalDialogComponent} from '../modal-dialog/modal-dialog.component';
 
 
 @Component({
@@ -20,8 +20,8 @@ export class HeaderComponent implements OnInit {
 
   /* show modal */
   constructor(
-    // private modalService: NgbModal,
     private authService: AuthService,
+    public dialog: MatDialog
   ) { }
 
   // this.authService.login({})
@@ -29,7 +29,11 @@ export class HeaderComponent implements OnInit {
 
   // });
 
-  // open(content) {
-  //   const modalRef = this.modalService.open(content);
-  // }
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
