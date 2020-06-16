@@ -1,4 +1,14 @@
-<form name="myform" ng-submit="register()" novalidate>
+<form name="myform" ng-submit="register()" novalidate #f="ngForm" [formGroup]="phoneForm">
+  <mat-form-field class="w-100">
+    <ngx-mat-intl-tel-input
+        [enablePlaceholder]="true"
+        [enableSearch]="true"
+        name="phone"
+        formControlName="phone" #phone></ngx-mat-intl-tel-input>
+    <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
+    <mat-error *ngIf="f.form.controls['phone']?.errors?.required">Required Field</mat-error>
+    <mat-error *ngIf="f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
+  </mat-form-field>
   <mat-form-field class="w-100">
     <input matInput placeholder="Номер телефона" aria-label="phone" [matAutocomplete]="auto" [formControl]="stateCtrl">
     <mat-autocomplete #auto="matAutocomplete">
