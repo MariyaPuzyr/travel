@@ -3,8 +3,6 @@ import {Phone} from '../../../../../main/consts/phone-code.conts';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-import {ModalDialogComponent} from '../../../../../main/components/modal-dialog/modal-dialog.component';
-import {MatDialog} from '@angular/material/dialog';
 
 export interface State {
   flag: string;
@@ -41,25 +39,19 @@ export class LoginFormComponent implements OnInit {
   ];
 
   constructor() {
-    public dialog: MatDialog;
-   /* this.filteredStates = this.stateCtrl.valueChanges
+
+    this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
         map(state => state ? this._filterStates(state) : this.states.slice())
-      );*/
+      );
   }
 
-  /*private _filterStates(value: string): State[] {
+  private _filterStates(value: string): State[] {
     const filterValue = value.toLowerCase();
 
     return this.states.filter(state => state.name.toLowerCase().indexOf(filterValue) === 0);
   }
-  openDialog() {
-    const dialogRef = this.dialog.open(ModalDialogComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }*/
   ngOnInit(): void {
   }
 

@@ -29,11 +29,7 @@ export class HeaderComponent implements OnInit {
 
   // });
 
-  // openDialog() {
-  //   const dialogRef = this.dialog.open(ModalDialogComponent);
-  //
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     // console.log(`Dialog result: ${result}`);
-  //   });
-  // }
+  openDialog() {
+    this.dialog.open(ModalDialogComponent);
+  }
 }
