@@ -1,7 +1,12 @@
+mat-toolbar-row {
+  height: auto;
+  padding: 0;
+}
 .navbar {
   border-bottom: 1px solid #E5E9EC;
   background: #ffffff;
   padding: 10px 30px;
+  width: 100%;
   .nav-link {
     font-size: 14px;
     line-height: 19px;
