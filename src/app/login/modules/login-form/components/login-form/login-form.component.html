@@ -10,15 +10,6 @@
     <mat-error *ngIf="f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
   </mat-form-field>
   <mat-form-field class="w-100">
-    <input matInput placeholder="Номер телефона" aria-label="phone" [matAutocomplete]="auto" [formControl]="stateCtrl">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-        <img class="example-option-img" [src]="state.flag" height="16" alt="">
-        <span>{{state.name}}</span>
-      </mat-option>
-    </mat-autocomplete>
-  </mat-form-field>
-  <mat-form-field class="w-100">
     <mat-label>Пароль</mat-label>
     <input matInput>
   </mat-form-field>
@@ -30,10 +21,10 @@
   <div class="form-group">
     <button type="submit" class="btn btn-primary rounded-pill w-100">Войти</button>
   </div>
-  <div class="form-group">
-    <div class="dont-registration text-center">Не зарегистрированы ? <a href="#">Зарегистрироваться</a></div>
-  </div>
 </form>
+<div class="form-group">
+  <div class="dont-registration text-center">Не зарегистрированы ? <a mat-button routerLink="/registration">Зарегистрироваться</a></div>
+</div>
 <div class="form-group login-social d-flex flex-column">
   <a href="#" class="btn border-primary rounded-pill mb-2">Войти с помощью Facebook</a>
   <a href="#" class="btn border-primary rounded-pill">Войти с помощью Google</a>
