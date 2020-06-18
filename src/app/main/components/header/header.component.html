@@ -1,3 +1,5 @@
+<div routerLink="/login">Login</div>
+<div routerLink="/registration">Registration</div>
 <mat-toolbar>
   <mat-toolbar-row>
     <nav class="navbar navbar-expand-lg">
@@ -11,10 +13,11 @@
         <div class="form-inline my-2 my-lg-0">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" mat-button routerLink="/registration">Зарегистрироваться</a>
+              <div class="nav-link" mat-button routerLink="/registration">Зарегистрироваться</div>
             </li>
             <li class="nav-item">
-              <div class="nav-link" mat-button (click)="openDialog()">Sign in</div>
+              <div class="nav-link" mat-button routerLink="/login">Sign in</div>
+              <!--<div class="nav-link" mat-button (click)="openDialog()">Sign in</div>-->
             </li>
 
             <li class="nav-item">

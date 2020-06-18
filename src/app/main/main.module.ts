@@ -8,6 +8,7 @@ import {_MatMenuDirectivesModule, MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule} from '@angular/material/button';
 import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     _MatMenuDirectivesModule,
     MatMenuModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule
   ],
   declarations: [
     HeaderComponent,
