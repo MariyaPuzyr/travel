@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './views/main/main.component';
@@ -9,7 +10,15 @@ import { MatButtonModule} from '@angular/material/button';
 import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {LoginComponent} from '../login/views/login/login.component';
+import {RegistrationComponent} from '../login/views/registration/registration.component';
 
+
+const routes = [
+  {path: '', component: MainComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'registration', component: RegistrationComponent}
+];
 
 @NgModule({
   imports: [
@@ -19,7 +28,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatMenuModule,
     MatButtonModule,
     MatDialogModule,
-    MatToolbarModule
+    MatToolbarModule,
+    RouterModule.forRoot(routes)
   ],
   declarations: [
     HeaderComponent,
