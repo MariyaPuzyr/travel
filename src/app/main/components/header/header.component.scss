@@ -2,11 +2,17 @@ mat-toolbar-row {
   height: auto;
   padding: 0;
 }
+
 .navbar {
   border-bottom: 1px solid #E5E9EC;
   background: #ffffff;
   padding: 10px 30px;
   width: 100%;
+  .navbar-brand, .nav-link {
+    &:focus {
+      outline: none;
+    }
+  }
   .nav-link {
     font-size: 14px;
     line-height: 19px;
@@ -22,6 +28,7 @@ mat-toolbar-row {
     background: #b2b7bb;
   }
 }
+
 .language-flag {
   width: 24px;
   height: 24px;
@@ -31,6 +38,7 @@ mat-toolbar-row {
 .form-group {
   position: relative;
 }
+
 .state-container-dropdown {
   position: absolute;
   z-index: 1;
