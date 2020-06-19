@@ -9,6 +9,9 @@ import {RegistrationComponent} from './views/registration/registration.component
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgxMatIntlTelInputModule} from 'ngx-mat-intl-tel-input';
 
 @NgModule({
   imports: [
@@ -17,7 +20,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     LoginFormModule,
     MatToolbarModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    NgxMatIntlTelInputModule
   ],
   declarations: [
     LoginComponent,
