@@ -7,8 +7,9 @@
     </div>
     <div class="modal-body">
       <form name="myform" ng-submit="register()" novalidate #f="ngForm" [formGroup]="phoneForm">
-        <mat-form-field class="w-100">
+        <!--<mat-form-field class="w-100" appearance="outline">
           <ngx-mat-intl-tel-input
+              matInput
               [enablePlaceholder]="true"
               [enableSearch]="true"
               name="phone"
@@ -16,17 +17,37 @@
           <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
           <mat-error *ngIf="f.form.controls['phone']?.errors?.required">Required Field</mat-error>
           <mat-error *ngIf="f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
+        </mat-form-field>-->
+        <mat-form-field class="w-100">
+          <mat-label>Telephone</mat-label>
+          <span matPrefix>+1 &nbsp;</span>
+          <input matInput [formControl]="phoneControl" placeholder="555-555-1234" autocomplete="off">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+          <mat-error *ngIf="phoneControl.hasError('email') && !phoneControl.hasError('required')">
+            Please enter a valid phone number
+          </mat-error>
+          <mat-error *ngIf="phoneControl.hasError('required')">
+            Phone is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
 
-
-       <!-- <mat-form-field>
-          <mat-label>Пароль</mat-label>
-          <input matInput>
-        </mat-form-field>-->
-
-        <div class="form-group d-flex">
-          <mat-checkbox>Запомнить меня</mat-checkbox>
-          <a href="#" class="ml-auto">Забыли пароль?</a>
+        <div class="form-group">
+          <mat-checkbox class="d-flex flex-wrap">Ознакомился и принимаю условия <a href="#">Публичного договора</a>
+          </mat-checkbox>
+        </div>
+        <div class="form-group">
+          <mat-checkbox>Ознакомился и принимаю <a href="#">Правила использования сервиса </a></mat-checkbox>
+        </div>
+        <div class="form-group">
+          <button mat-button class="btn btn-primary rounded-pill w-100">Зарегистрироваться</button>
         </div>
       </form>
       <div class="form-group">
@@ -37,8 +58,6 @@
         <a href="#" class="btn border-primary rounded-pill mb-2">Войти с помощью Facebook</a>
         <a href="#" class="btn border-primary rounded-pill">Войти с помощью Google</a>
       </div>
-      <button mat-button class="btn btn-primary rounded-pill w-100">Зарегистрироваться</button>
-
     </div>
   </div>
 </div>

@@ -7,9 +7,14 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  hide = true;
   phoneForm = new FormGroup({
     phone: new FormControl(undefined, [Validators.required])
   });
+  readonly phoneControl = new FormControl('', [
+    Validators.required,
+    Validators.pattern(('[6-9]\\d{9}'))
+  ]);
   constructor() { }
 
   ngOnInit(): void {

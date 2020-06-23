@@ -12,6 +12,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {LoginComponent} from '../login/views/login/login.component';
 import {RegistrationComponent} from '../login/views/registration/registration.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 
 const routes = [
@@ -29,7 +32,10 @@ const routes = [
     MatButtonModule,
     MatDialogModule,
     MatToolbarModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule
   ],
   declarations: [
     HeaderComponent,
