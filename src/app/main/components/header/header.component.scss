@@ -47,3 +47,16 @@ mat-toolbar-row {
   max-height: 300px;
   background: #fcfcdc;
 }
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 10px;
+    .navbar-brand img {
+      height: 30px;
+    }
+    .navbar-nav {
+      flex-flow: row wrap;
+      width: 100%;
+    }
+  }
+}
