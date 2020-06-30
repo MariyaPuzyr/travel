@@ -13,6 +13,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxMatIntlTelInputModule} from 'ngx-mat-intl-tel-input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatCheckboxModule,
     NgxMatIntlTelInputModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
   ],
   declarations: [
     LoginComponent,

@@ -21,3 +21,9 @@ button.ng-tns-c79-2 {
   border: none;
   background: none;
 }
+
+::ng-deep .mat-checkbox {
+  label {
+    white-space: normal;
+  }
+}
