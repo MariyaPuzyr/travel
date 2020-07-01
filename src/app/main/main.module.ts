@@ -32,7 +32,8 @@ const routes = [
     MatButtonModule,
     MatDialogModule,
     MatToolbarModule,
-    RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
+    RouterModule,
     MatIconModule,
     MatSidenavModule,
     MatListModule

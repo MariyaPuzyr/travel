@@ -9,6 +9,7 @@ import { MaterialAppModule } from './ngmaterial.module';
 import {LoginFormModule} from './login/modules/login-form/login-form.module';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
+import {AuthModule} from './auth/auth.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AppComponent } from './app.component';
     MaterialAppModule,
     LoginFormModule,
     FormsModule,
+    AuthModule
   ],
   declarations: [
     AppComponent,

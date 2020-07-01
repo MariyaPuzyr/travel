@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3 mt-4">
+    <h3>Login</h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+      <p>Form value: {{ f.value | json }}</p>
+      <p>Form valid: {{ f.valid }}</p>
+
+      <div class="form-group">
+        <label for="loginUserName">User name</label>
+        <input type="text" name="userName" ngModel required #userName="ngModel"
+               class="form-control" id="loginUserName" placeholder="Enter user name">
+
+        <p>user name value: {{ userName.value }}</p>
+        <p>user name valid: {{ userName.valid }}</p>
+        <p>user name dirty: {{ userName.dirty }}</p>
+        <p>user name touched: {{ userName.touched }}</p>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" name="password" ngModel required #password="ngModel"
+               class="form-control" id="loginPassword" placeholder="Password">
+      </div>
+      <div class="form-group form-check">
+        <a [routerLink]="['/reset-password']">Forgot Password</a>
+
+        <p>Password value: {{ password.value }}</p>
+        <p>Password valid: {{ password.valid }}</p>
+        <p>Password dirty: {{ password.dirty }}</p>
+        <p>Password touched: {{ password.touched }}</p>
+      </div>
+      <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+    </form>
+  </div>
+</div>
