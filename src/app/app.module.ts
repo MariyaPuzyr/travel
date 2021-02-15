@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { MainModule } from './main/main.module';
 import { CoreModule } from './core/core.module';
@@ -10,6 +11,7 @@ import {LoginFormModule} from './login/modules/login-form/login-form.module';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import {AuthModule} from './auth/auth.module';
+import { MindMapComponent } from './mind-map/mind-map.component';
 
 
 @NgModule({
@@ -22,10 +24,12 @@ import {AuthModule} from './auth/auth.module';
     MaterialAppModule,
     LoginFormModule,
     FormsModule,
-    AuthModule
+    AuthModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
+    MindMapComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

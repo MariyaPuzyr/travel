@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 import { Languages } from '../../consts/languages.const';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { AuthService } from 'src/app/core/shared/services/auth.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ModalDialogComponent} from '../modal-dialog/modal-dialog.component';
 

@@ -1,16 +1,18 @@
 <div class="row">
   <div class="col-md-6 offset-md-3 mt-4">
     <h3>Login</h3>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
       <div class="form-group">
         <label for="loginUserName">User name</label>
-        <input type="text" name="userName" ngModel required #userName="ngModel"
+        <input type="text" name="userName" ngModel required #userName="ngModel" autocomplete="off"
                class="form-control" id="loginUserName" placeholder="Enter user name">
+        <div class="alert alert-danger" [hidden]="userName.valid || userName.pristine">Please enter your name</div>
       </div>
       <div class="form-group">
         <label for="loginPassword">Password</label>
         <input type="password" name="password" ngModel required #password="ngModel"
                class="form-control" id="loginPassword" placeholder="Password">
+        <div class="alert alert-danger" [hidden]="password.valid || password.pristine">Password is required</div>
       </div>
       <div class="form-group form-check">
         <a [routerLink]="['/reset-password']">Forgot Password</a>
